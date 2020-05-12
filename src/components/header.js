@@ -1,42 +1,36 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+// import Navigation from "./navigation"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
+const Header = () => {
+  return (
+    <header className=" flex flex-col items-center px-5 py-3 lg:flex-row lg:justify-between ">
+      <div className="mt-2  text-orange-200 hover:text-white focus:text-white focus:outline-none text-2xl font-bold leading-4 no-underline">
+        <a className="ml-5">RM</a>
+      </div>
+      <div className="mt-3 text-orange-200 hover:text-white focus:text-white focus:outline-none text-xl font-bold leading-4 no-underline">
+        <a
+          href="#responsive-header"
+          className="p-1 mr-5"
         >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+          About
+        </a>
+        <a
+          href="#responsive-header"
+          className=" p-1 mr-5"
+        >
+          Projects
+        </a>
+        <a
+          href="#responsive-header"
+          className=" p-1 mr-5"
+        >
+          Blog
+        </a>
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
+        {/* <Navigation /> */}
+      </div>
+    </header>
+  )
 }
 
 export default Header
