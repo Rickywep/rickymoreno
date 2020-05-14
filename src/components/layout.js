@@ -1,12 +1,17 @@
 import React from "react"
-import Header from "./header"
 import {Helmet} from 'react-helmet';
-
+import Seo from './Seo'
 const Layout = props => {
+  const data = Seo()
+  const {
+    // siteName, 
+    fallbackSeo: {description, title}} = data
+
   return (
     <>
       <Helmet>
-        <title>Rickywep</title>
+        <title>{title}</title>
+        <meta name="description" content={description}/>
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
           rel="stylesheet"
@@ -21,7 +26,6 @@ const Layout = props => {
         />
         
       </Helmet>
-      {/* <Header /> */}
       {props.children}
     </>
   )
