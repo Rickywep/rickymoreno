@@ -13,7 +13,7 @@ const About = () => {
             <h1 className="text-orange-600 font-bold text-center lg:text-left">
               {titulo}
             </h1>
-            <p className="lg:mr-10 text-lg text-justify tracking-wider">
+            <p className="lg:mr-10 text-lg text-justify ">
               {contenido}
             </p>
           </div>

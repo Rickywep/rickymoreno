@@ -7,7 +7,7 @@ const Proyect = ({ proyecto }) => {
     <div className="max-w-sm w-full lg:w-1/2 lg:max-w-lg lg:flex m-2 border rounded border-orange-200 lg:overflow-hidden lg:h-40 bg-white hover:shadow-lg hover:bg-orange-200">
       <div className="p-2">
         <img
-          className=""
+          className="w-56"
           src={imagen.fluid.src}
           alt="Avatar of Jonathan Reinink"
           width="400"
